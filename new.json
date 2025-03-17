@@ -1,0 +1,55 @@
+{
+    "name": "London College",
+    "address": "Birmingham",
+    "departments": [
+      {
+        "name": "Computer Science",
+        "hod": "John Doe",
+        "batches": [
+          {
+            "name": "Batch-1",
+            "staffName": "Jacob Smith",
+            "capacity": 40,
+            "students": [
+              {
+                "name": "Ganesh Kumar",
+                "dateOfBirth": "1990-04-10"
+              },
+              {
+                "name": "Alice Johnson",
+                "dateOfBirth": "1991-05-15"
+              }
+            ]
+          },
+          {
+            "name": "Batch-2",
+            "staffName": "Emily Brown",
+            "capacity": 35,
+            "students": [
+              {
+                "name": "Bob Williams",
+                "dateOfBirth": "1992-06-20"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mathematics",
+        "hod": "Jane Smith",
+        "batches": [
+          {
+            "name": "Batch-A",
+            "staffName": "Michael Green",
+            "capacity": 30,
+            "students": [
+              {
+                "name": "Charlie Davis",
+                "dateOfBirth": "1993-07-25"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
