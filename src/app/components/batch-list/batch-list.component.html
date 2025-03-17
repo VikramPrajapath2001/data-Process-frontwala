@@ -1,0 +1,41 @@
+<div *ngIf="batches && batches.length > 0 ">
+  <div *ngFor="let batch of batches" class="batch-container">
+    <h3>Batch: {{ batch.name }}</h3>
+    <p>Staff Name: {{ batch.staffName }}</p>
+    <p>Capacity: {{ batch.capacity }}</p>
+
+    <div *ngIf="batch.students && batch.students.length > 0">
+      <h4>Students:</h4>
+      <table class="table table-bordered table-striped rounded-2 overflow-hidden">
+        <thead class="table-dark">
+          <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of batch.students">
+
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>
+              <button (click)="updateStudent(student.id)" class="btn btn-success">
+                Update
+              </button>
+              <button (click)="deleteStudent(student.id)" class="btn btn-danger">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="!batch.students || batch.students.length === 0">
+      <p>No students in this batch.</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="!batches || batches.length === 0">
+  <p>No batches available.</p>
+</div>

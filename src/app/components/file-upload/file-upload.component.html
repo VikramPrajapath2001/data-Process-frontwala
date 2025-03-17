@@ -1,0 +1,29 @@
+<div class="text-center mb-4">
+  <h2>Upload JSON File</h2>
+</div>
+<div class="container d-flex justify-content-center align-items-center mt-4" >
+
+  <div class="card shadow-sm" style="width: 400px; height: 200px;">
+    <div class="card-body">
+      <div class="mb-3">
+        <label for="fileInput" class="form-label">Choose a JSON file:</label>
+        <input
+          id="fileInput"
+          type="file"
+          class="form-control"
+          title="Choose a JSON file"
+          (change)="onFileSelected($event)"
+        />
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button
+          class="btn btn-primary"
+          (click)="onUpload()"
+        >
+          Upload
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

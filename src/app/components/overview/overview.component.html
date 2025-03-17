@@ -1,0 +1,89 @@
+<div class="container mt-4">
+  <h2>Overview</h2>
+
+  <!-- Search Bar -->
+  <div class="form-group mb-4">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search by name"
+      [(ngModel)]="searchText"
+    />
+  </div>
+
+  <!-- Colleges -->
+  <h3>Colleges</h3>
+  <table class="table table-bordered table-striped rounded-2 overflow-hidden">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>College Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let college of filteredColleges()">
+        <td>{{ college.id }}</td>
+        <td>{{ college.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Departments -->
+  <h3>Departments</h3>
+  <table class="table table-bordered table-striped rounded-2 overflow-hidden">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Department Name</th>
+        <th>HOD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let department of filteredDepartments()">
+        <td>{{ department.id }}</td>
+        <td>{{ department.name }}</td>
+        <td>{{ department.hod }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Batches -->
+  <h3>Batches</h3>
+  <table class="table table-bordered table-striped rounded-2 overflow-hidden">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Batch Name</th>
+        <th>Staff</th>
+        <th>Capacity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let batch of filteredBatches()">
+        <td>{{ batch.id }}</td>
+        <td>{{ batch.name }}</td>
+        <td>{{ batch.staffName }}</td>
+        <td>{{ batch.capacity }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Students -->
+  <h3>Students</h3>
+  <table class="table table-bordered table-striped rounded-2 overflow-hidden">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Student Name</th>
+        <th>Date Of Birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of filteredStudents()">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.dateOfBirth }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
